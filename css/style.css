@@ -1,0 +1,124 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Definición de fuentes */
+
+
+.edu-qld-hand-regular {
+  font-family: "Edu QLD Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.cormorant-garamond-regular {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  height: 30rem;
+  background-image: url(../img/fachada.jpg);
+  background-color: rgba(0, 0, 0, 0.8); /* Capa oscura */
+  background-blend-mode: darken; /* O también puede ser multiply */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 80%;
+  position: relative;
+}
+
+.header__texto {
+
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  display: inline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 458px) {
+  .header__texto {
+    font-size: 4rem;
+  }
+    
+}
+
+@media (min-width: 768px) {
+    .header__texto {
+      font-size: 5rem;
+    }
+}
+
+.contenedor-background {
+  background-color: black;
+}
+
+.contenedor {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  display: grid;
+
+  width: 90%;
+  max-width: 40rem;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.contenedor__imagen,
+.contenedor__texto {
+  padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+    .contenedor {
+      max-width: 100rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 10rem;
+    }
+
+    .texto2 {
+      grid-column: 2;
+    }
+
+    .imagen2 {
+      grid-column: 1;
+      grid-row: 2;
+    }
+}
+
+.contenedor__imagen {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.contenedor__texto {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.icono-store {
+  color: white;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 2rem;
+}
