@@ -1,6 +1,6 @@
 html {
-    box-sizing: border-box;
     font-size: 62.5%;
+    box-sizing: border-box;
 }
 
 *, *::before, *::after {
@@ -9,7 +9,6 @@ html {
 
 /* Definición de fuentes */
 
-
 .edu-qld-hand-regular {
   font-family: "Edu QLD Hand", cursive;
   font-optical-sizing: auto;
@@ -17,6 +16,12 @@ html {
   font-style: normal;
 }
 
+.edu-qld-hand-bold {
+  font-family: "Edu QLD Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
 
 .cormorant-garamond-regular {
   font-family: "Cormorant Garamond", serif;
@@ -25,92 +30,113 @@ html {
   font-style: normal;
 }
 
-.header {
-  height: 30rem;
-  background-image: url(../img/fachada.jpg);
-  background-color: rgba(0, 0, 0, 0.8); /* Capa oscura */
-  background-blend-mode: darken; /* O también puede ser multiply */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center 80%;
-  position: relative;
-}
-
-.header__texto {
-
-  color: white;
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 0;
-  display: inline;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-@media (min-width: 458px) {
-  .header__texto {
-    font-size: 4rem;
-  }
-    
-}
-
-@media (min-width: 768px) {
-    .header__texto {
-      font-size: 5rem;
-    }
-}
-
-.contenedor-background {
-  background-color: black;
-}
 
 .contenedor {
-  padding-top: 10rem;
-  padding-bottom: 5rem;
-  display: grid;
-
-  width: 90%;
-  max-width: 40rem;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
+    max-width: 100rem;
+    width: 90%;
+    margin: 0 auto;
 }
 
-.contenedor__imagen,
-.contenedor__texto {
-  padding: 3rem 0;
+.encabezado {
+    height: 30rem;
+    background-image: url(../img/fachada.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.8); /* Capa oscura */
+    background-blend-mode: darken; /* O también puede ser multiply */
+}
+
+.barra {
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.navegacion__enlace {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
 }
 
 @media (min-width: 768px) {
-    .contenedor {
-      max-width: 100rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      row-gap: 10rem;
+    .barra {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    .texto2 {
-      grid-column: 2;
-    }
+}
 
-    .imagen2 {
-      grid-column: 1;
-      grid-row: 2;
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+    padding-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 5rem;
     }
 }
 
-.contenedor__imagen {
-  width: 80%;
-  height: auto;
-  margin: 0 auto;
+.tituloEnlace {
+    text-decoration: none;
 }
 
-.contenedor__texto {
-  font-size: 2.5rem;
-  color: white;
+
+.barraSeparador {  /* Simplemente creamos una linea blanca para el diseño*/
+    height: 3rem;
+}
+
+.contenedorFondo {
+    background-color: black;
+}
+
+.articulo:first-child {
+    padding-top: 2rem;
+}
+
+.articulo__texto {
+    color: white;
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.contenedor__articulo__imagen {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.articulo__imagen {
+    width: 90%;
+}
+
+@media (min-width: 768px) {
+    .articulo:first-child {
+        padding-top: 6rem; 
+    }
+
+    .articulo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8rem;
+        padding-bottom: 10rem;
+    }
+
+    .articulo:last-child {
+        flex-direction: row-reverse;
+    }
+
+    .articulo__texto {
+        font-size: 3rem;
+        flex: 1;
+    }
+
+    .contenedor__articulo__imagen {
+        flex: 1;
+    }
 }
 
 .icono-store {
@@ -118,7 +144,60 @@ html {
   text-align: center;
 }
 
-footer {
-  text-align: center;
-  padding-bottom: 2rem;
+.contenedorIcono-store {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
 }
+
+/* Pagina de productos */
+
+.producto:first-child {
+    padding-top: 5rem;
+}
+
+.producto__texto {
+    font-size: 2.5rem;
+    color: white;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.producto__texto:last-child {
+    padding-bottom: 2rem;
+}
+
+.producto__imagen {
+    width: 90%;
+    max-width: 30rem;
+}
+
+.contenedor__producto__imagen {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .producto {
+        display: flex;
+        align-items: center;
+        padding-bottom: 3rem;
+        gap: 3rem;
+    }
+
+    .producto__texto {
+        flex: 2;
+        gap: 2rem;
+    }
+
+    .contenedor__producto__imagen {
+        flex: 1;
+    }
+
+    .producto__imagen {
+        max-width: 90%;
+    }
+
+}
+
+
+
